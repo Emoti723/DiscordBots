@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream
-//HONKbot @Emoti723#6885
-
-=======
 // HONKbot @Emoti723#6885
->>>>>>> Stashed changes
 const Discord = require('discord.js');
 const client = new Discord.Client()
 

@@ -1,5 +1,4 @@
 //GOOSEbot @Emoti723#6885
-
 const Discord = require('discord.js');
 const client = new Discord.Client()
 
@@ -18,7 +17,6 @@ client.on('ready', () => {
 });
 
 // Test for the word HONK and reply with GOOSE
-
 client.on('message', msg => {
 	var string = msg.content.toUpperCase();
     var count = (string.match(/HONK/g) || []).length;
