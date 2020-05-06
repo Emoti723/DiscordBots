@@ -40,4 +40,5 @@ setInterval(function() {
 
 
 //token
-client.login('TOKEN'); 
+const config = require("./GOOSEconfig.json");
+client.login(GOOSEconfig.token); // Uses value of key 'token' in config file. 

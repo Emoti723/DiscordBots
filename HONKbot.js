@@ -40,4 +40,5 @@ setInterval(function() {
 
 
 //token
-client.login('TOKEN');
+const config = require("./HONKconfig.json");
+client.login(HONKconfig.token); // Uses value of key 'token' in config file. 
