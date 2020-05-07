@@ -6,3 +6,5 @@ Tokens act like a password for bots.
 
 Link to Discord Server in which these bots are (usually) in action. 
 https://discord.gg/s38zsbc
+
+thx
