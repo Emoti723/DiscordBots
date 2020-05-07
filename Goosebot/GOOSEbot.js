@@ -44,20 +44,25 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'G:sum') { 
     msg.reply(sum);
-    console.log('sum has been requested');
-    console.log('${sum} @ $(created)');
-	logger.info('sum has been requested');
-	logger.info('${sum} @ $(created)');
+	  
+	var newTime = moment().format('YYYY-MM-DD hh:mm:ss');
+	
+	console.log('Its been 5 minutes');
+	console.log(`${sum} @ ${newTime}`);
+	logger.info('its been 5 minutes');
+	logger.info(`${sum} @ ${newTime}`);
   }
 });
 
 // After 5 minutes, log the sum to console
 var minutes = 5, the_interval = minutes * 60 * 1000;
 setInterval(function() {
+	var newTime = moment().format('YYYY-MM-DD hh:mm:ss');
+	
 	console.log('Its been 5 minutes');
-	console.log('${sum} @ ${created}');
+	console.log(`${sum} @ ${newTime}`);
 	logger.info('its been 5 minutes');
-	logger.info('${sum} @ ${created}');
+	logger.info(`${sum} @ ${newTime}`);
 }, the_interval);
 
 //token
