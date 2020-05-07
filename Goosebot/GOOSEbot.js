@@ -16,7 +16,9 @@ myLoggers.configure({
 const logger = myLoggers.getLogger("default");
 
 //Timestamp Code
-var created = moment().format('YYYY-MM-DD hh:mm:ss')
+for (;;) {
+	var created = moment().format('YYYY-MM-DD hh:mm:ss');
+}
 
 var sum = 0;
 var prefix = 'G:sum';
