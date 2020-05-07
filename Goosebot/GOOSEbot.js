@@ -1,4 +1,4 @@
-//HONKbot @Emoti723#6885
+//GOOSEbot @Emoti723#6885
 //V3.0
 
 const Discord = require('discord.js');
@@ -8,30 +8,30 @@ var sum = 0;
 
 // Initialization 
 client.on("ready", () =>{
-    console.log(`Logged in as HONKBot#9853!`);
+    console.log(`Logged in as GOOSEBot#5787!`);
 	console.log(sum);
     client.user.setPresence({
         status: "online",  //You can show online, idle....
         game: {
-            name: "H:sum",  //The message shown
+            name: "G:sum",  //The message shown
             type: "LISTENING" //PLAYING: WATCHING: LISTENING: STREAMING:
         }
     });
  });
  
-// Test for the word GOOSE and reply with HONK
+// Test for the word HONK and reply with GOOSE
 client.on('message', msg => {
 	var string = msg.content.toUpperCase();
-    var count = (string.match(/GOOSE/g) || []).length;
+    var count = (string.match(/HONK/g) || []).length;
 		for (i = 0; i < count; i++) {
-            msg.reply('*HONK*');
+            msg.reply('*GOOSE*');
 		sum = sum + 1;
         }
 });
 
 // G:sum command, which makes the bot respond with the current sum
 client.on('message', msg => {
-  if (msg.content === 'H:sum') { 
+  if (msg.content === 'G:sum') { 
     msg.reply(sum);
     console.log('sum has been requested');
     console.log(sum);
@@ -47,5 +47,5 @@ setInterval(function() {
 
 //token
 const config = require("./TOKEN.json");
-client.login(config.HONKtoken); // Uses value of key 'token' in config file. 
+client.login(config.token); // Uses value of key 'token' in config file. 
 
