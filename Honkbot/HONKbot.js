@@ -47,5 +47,5 @@ setInterval(function() {
 
 //token
 const config = require("./TOKEN.json");
-client.login(config.token); // Uses value of key 'token' in config file. 
+client.login(config.token); // Uses value of key 'token' in the TOKEN file. 
 
