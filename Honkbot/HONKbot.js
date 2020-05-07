@@ -32,8 +32,6 @@ client.on("ready", () =>{
 	client.user.setActivity(`prefix: ${prefix}`, { type: 'STREAMING' });
 });
  
- 
-
 // Test for the word GOOSE and reply with HONK
 client.on('message', msg => {
 	var string = msg.content.toUpperCase();
