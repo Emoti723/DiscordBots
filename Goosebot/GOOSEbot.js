@@ -30,8 +30,8 @@ client.on("ready", () =>{
 	logger.info(sum);
 	logger.info(created);
 	client.user.setActivity(`prefix: ${prefix}`, { type: 'STREAMING' });
-	});
- });
+});
+
  
 
 // Test for the word HONK and reply with GOOSE
