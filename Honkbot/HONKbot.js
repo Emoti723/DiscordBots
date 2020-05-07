@@ -45,9 +45,9 @@ client.on('message', msg => {
   if (msg.content === 'H:sum') { 
     msg.reply(sum);
     console.log('sum has been requested');
-    console.log('${sum} @ $(created)');
+    console.log(`${sum} @ $(created)`);
 	logger.info('sum has been requested');
-	logger.info('${sum} @ $(created)');
+	logger.info(`${sum} @ $(created)`);
   }
 });
 
