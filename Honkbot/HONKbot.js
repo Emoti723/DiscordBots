@@ -47,9 +47,9 @@ client.on('message', msg => {
     created = moment().format('YYYY-MM-DD hh:mm:ss');
 	msg.reply(sum);
     console.log('sum has been requested');
-    console.log(`${sum} @ $(created)`);
+    console.log(`${sum} @ ${created}`);
 	logger.info('sum has been requested');
-	logger.info(`${sum} @ $(created)`);
+	logger.info(`${sum} @ ${created)`};
   }
 });
 
