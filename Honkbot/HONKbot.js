@@ -26,7 +26,7 @@ client.on("ready", () =>{
     created = moment().format('YYYY-MM-DD hh:mm:ss');
 	console.log(`Logged in as HONKBot#9853! @ ${created}`);
 	console.log(sum);
-	logger.info(`Logged in as HONKBot#9853! @ ${Created}`);
+	logger.info(`Logged in as HONKBot#9853! @ ${created}`);
 	logger.info(sum);
 	client.user.setActivity(`${prefix}`, { type: 'STREAMING' });
 });
