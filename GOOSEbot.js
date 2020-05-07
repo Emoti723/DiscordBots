@@ -1,21 +1,24 @@
 //GOOSEbot @Emoti723#6885
+//V3.0
+
 const Discord = require('discord.js');
 const client = new Discord.Client()
 
-// Initialization
-client.on('ready', () => {
-  var sum = 0;
-  client.user.setPresence({
-        game: { 
-            name: 'G:sum',
-            type: 'LISTENING'
-        },
-        status: 'online'
-    })
-  console.log('logged in as GOOSEbot');
-  console.log(sum);
-});
+var sum = 0;
 
+// Initialization 
+client.on("ready", () =>{
+    console.log(`Logged in as GOOSEBot#5787!`);
+	console.log(sum);
+    client.user.setPresence({
+        status: "online",  //You can show online, idle....
+        game: {
+            name: "G:sum",  //The message shown
+            type: "LISTENING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
+ });
+ 
 // Test for the word HONK and reply with GOOSE
 client.on('message', msg => {
 	var string = msg.content.toUpperCase();
@@ -43,5 +46,6 @@ setInterval(function() {
 }, the_interval);
 
 //token
-const config = require("./GOOSEconfig.json");
-client.login(GOOSEconfig.token); // Uses value of key 'token' in config file. 
+const config = require("./TOKEN.json");
+client.login(config.GOOSEtoken); // Uses value of key 'token' in config file. 
+
