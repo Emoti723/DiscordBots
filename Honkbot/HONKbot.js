@@ -24,7 +24,7 @@ var prefix = 'H:sum';
 // Initialization 
 client.on("ready", () =>{
     created = moment().format('YYYY-MM-DD hh:mm:ss');
-	.log(`Logged in as HONKBot#9853! @ ${created}`);
+	console.log(`Logged in as HONKBot#9853! @ ${created}`);
 	console.log(sum);
 	logger.info(`Logged in as HONKBot#9853! @ ${Created}`);
 	logger.info(sum);
