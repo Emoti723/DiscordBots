@@ -23,13 +23,11 @@ var prefix = 'G:sum';
 
 // Initialization 
 client.on("ready", () =>{
-    console.log(`Logged in as GOOSEBot#5787!`);
+    console.log(`Logged in as GOOSEBot#5787! @ ${created}`);
 	console.log(sum);
-	console.log(created);
-	logger.info(`Logged in as GOOSEBot#5787!`);
+	logger.info(`Logged in as GOOSEBot#5787! @ ${created}`);
 	logger.info(sum);
-	logger.info(created);
-	client.user.setActivity(`prefix: ${prefix}`, { type: 'STREAMING' });
+	client.user.setActivity(`${prefix}`, { type: 'STREAMING' });
 });
  
 // Test for the word HONK and reply with GOOSE
@@ -47,11 +45,9 @@ client.on('message', msg => {
   if (msg.content === 'G:sum') { 
     msg.reply(sum);
     console.log('sum has been requested');
-    console.log(sum);
-	console.log(created);
+    console.log('${sum} @ $(created)');
 	logger.info('sum has been requested');
-	logger.info(sum);
-	logger.info(created);
+	logger.info('${sum} @ $(created)');
   }
 });
 
@@ -59,11 +55,9 @@ client.on('message', msg => {
 var minutes = 5, the_interval = minutes * 60 * 1000;
 setInterval(function() {
 	console.log('Its been 5 minutes');
-	console.log(sum); 
-	console.log(created);
+	console.log('${sum} @ $(created)');
 	logger.info('its been 5 minutes');
-	logger.info(sum);
-	logger.info(created);
+	logger.info('${sum} @ $(created)');
 }, the_interval);
 
 //token
