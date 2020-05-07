@@ -16,16 +16,15 @@ myLoggers.configure({
 const logger = myLoggers.getLogger("default");
 
 //Timestamp Code
-for (;;) {
 	var created = moment().format('YYYY-MM-DD hh:mm:ss');
-}
 
 var sum = 0;
 var prefix = 'G:sum';
 
 // Initialization 
 client.on("ready", () =>{
-    console.log(`Logged in as GOOSEBot#5787! @ ${created}`);
+    created = moment().format('YYYY-MM-DD hh:mm:ss');
+	console.log(`Logged in as GOOSEBot#5787! @ ${created}`);
 	console.log(sum);
 	logger.info(`Logged in as GOOSEBot#5787! @ ${created}`);
 	logger.info(sum);
@@ -45,8 +44,9 @@ client.on('message', msg => {
 // G:sum command, which makes the bot respond with the current sum
 client.on('message', msg => {
   if (msg.content === 'G:sum') { 
-    msg.reply(sum);
-    console.log('sum has been requested');
+    created = moment().format('YYYY-MM-DD hh:mm:ss');
+	msg.reply(sum);
+	console.log('sum has been requested');
     console.log(`${sum} @ ${created}`);
 	logger.info('sum has been requested');
 	logger.info(`${sum} @ $(created)`);
@@ -56,6 +56,7 @@ client.on('message', msg => {
 // After 5 minutes, log the sum to console
 var minutes = 5, the_interval = minutes * 60 * 1000;
 setInterval(function() {
+	created = moment().format('YYYY-MM-DD hh:mm:ss');
 	console.log('Its been 5 minutes');
 	console.log(`${sum} @ ${created}`);
 	logger.info('its been 5 minutes');
