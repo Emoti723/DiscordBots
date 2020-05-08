@@ -20,6 +20,7 @@ const logger = myLoggers.getLogger("default");
 
 var sum = 0;
 var prefix = 'G:sum';
+var lastChannel;
 
 // Initialization 
 client.on("ready", () =>{
@@ -36,8 +37,25 @@ client.on('message', msg => {
 	var string = msg.content.toUpperCase();
     var count = (string.match(/HONK/g) || []).length;
 		for (i = 0; i < count; i++) {
-            msg.reply('*GOOSE*');
-		sum = sum + 1;
+
+			/*\ This function checks if its in the #bot-battle channel. 
+			|*|	If it is not in #bot-battle and the last time it had to reply wasnt in the same channel it will reply to the users that send "honk"
+			|*| The first else if will trigger if it hasn't been said in #bot-battle, if it was in the same channel as the last one and if the user was not GOOSEbot.
+			|*| If those 3 conditions are true, it'll reply
+			|*|	The last else if checks again if it is in #bot-battle. If it is, it will reply without any other conditions
+			\*/
+			console.log(lastChannel)
+
+			if(msg.channel !== "708022728560738344" && lastChannel !== msg.channel.id) {
+				lastChannel = msg.channel.id;
+				msg.reply('*GOOSE*')
+			}else if(msg.channel !== "708022728560738344" && lastChannel == msg.channel.id && msg.author.id !== "707372782211694684"){
+				lastChannel = msg.channel.id;
+				msg.reply('*GOOSE*')
+			} else if(msg.channel == "708022728560738344"){
+				msg.reply('*GOOSE*');
+				sum = sum + 1;
+			}
         }
 });
 
