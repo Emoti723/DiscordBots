@@ -40,7 +40,7 @@ client.on('message', msg => {
 
 			/*\ This function checks if its in the #bot-battle channel. 
 			|*|	If it is not in #bot-battle and the last time it had to reply wasnt in the same channel it will reply to the users that send "honk"
-			|*| The first else if will trigger if it hasn't been said in #bot-battle, if it was in the same channel as the last one and if the user was not GOOSEbot.
+			|*| The first else if will trigger if it hasn't been said in #bot-battle, if it was in the same channel as the last one and if the user was not HONKbot.
 			|*| If those 3 conditions are true, it'll reply
 			|*|	The last else if checks again if it is in #bot-battle. If it is, it will reply without any other conditions
 			\*/
