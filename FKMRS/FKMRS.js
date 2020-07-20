@@ -28,10 +28,12 @@ client.on("ready", () =>{
 });
 
 client.on('message', msg => {
-  if (msg.content === prefix) {
-    msg.reply('Pong!');
-  }
+    if (msg === prefix) {
+        message.channel.send('1/10', {
+            files: [
+                "./photos/1.jpg"
 });
+
 
 //token
 const config = require("./TOKEN.json");
