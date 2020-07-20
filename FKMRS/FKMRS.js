@@ -29,7 +29,7 @@ client.on("ready", () =>{
 
 client.on('message', msg => {
     if (msg.content === prefix) {
-        message.reply('1/10', {
+        msg.reply('1/10', {
             files: [
                 "./photos/1.jpg"
             ]
