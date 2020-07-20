@@ -32,8 +32,10 @@ client.on('message', msg => {
         message.channel.send('1/10', {
             files: [
                 "./photos/1.jpg"
+            ]
+        });
+    }
 });
-
 
 //token
 const config = require("./TOKEN.json");
