@@ -34,12 +34,25 @@ client.on("ready", () =>{
 // Test for the word GOOSE and reply with HONK
 client.on('message', msg => {
     var string = msg.content.toUpperCase();
-    var count = (string.match(/GOOSE/g) || []).length + (string.match(/GOSLING/g) || []).length + (string.match(/GEESE/g) || []).length;
+    var count = (string.match(/GOOSE/g) || []).length + (string.match(/GOSLING/g) || []).length;
     for (i = 0; i < count; i++) {
         msg.reply('*HONK*');
 			sum = sum + 1;
     }
 });
+
+// Test for the word GEESE and reply with 3 HONK
+client.on('message', msg => {
+    var string = msg.content.toUpperCase();
+    var count = (string.match(/GEESE/g) || []).length;
+    for (i = 0; i < count; i++) {
+        msg.reply('*HONK*');
+		msg.reply('*HONK*');
+		msg.reply('*HONK*');		
+			sum = sum + 3;
+    }
+});
+
 
 
 // Prefix command, which makes the bot respond with the current sum
