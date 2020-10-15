@@ -10,12 +10,9 @@ const client = new Discord.Client()
 //Timestamp variable
 var created = moment().format('YYYY-MM-DD hh:mm:ss');
 
-//Timestamp variable
-var created = moment().format('YYYY-MM-DD hh:mm:ss');
-
 //Log File code
 myLoggers.configure({
-    appenders: { mylogger: { type:"file", filename:"${created}-log.txt" } },
+    appenders: { mylogger: { type:"file", filename:`${created} log.txt` } },
     categories: { default: { appenders:["mylogger"], level:"ALL" } }
 });
 
