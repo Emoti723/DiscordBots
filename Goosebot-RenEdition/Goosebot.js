@@ -15,7 +15,7 @@ var created = moment().format('YYYY-MM-DD hh:mm:ss');
 
 //Log File code
 myLoggers.configure({
-    appenders: { mylogger: { type:"file", filename: `${created}-log.txt` } },
+    appenders: { mylogger: { type:"file", filename:"${created}-log.txt" } },
     categories: { default: { appenders:["mylogger"], level:"ALL" } }
 });
 
@@ -37,10 +37,22 @@ client.on("ready", () =>{
 // Test for the word GOOSE and reply with HONK
 client.on('message', msg => {
 	var string = msg.content.toUpperCase();
-    var count = (string.match(/GOOSE/g) || []).length;
+    var count = (string.match(/GOOSE/g) || []).length + (string.match(/GOSLING/g) || []).length;
 		for (i = 0; i < count; i++) {
             msg.reply('*HONK*'); 
-				sum = sum + 1;
+				sum = sum + 1; 
+        }
+});
+
+// Test for the word GEESE and reply with HONKS
+client.on('message', msg => {
+	var string = msg.content.toUpperCase();
+    var count = (string.match(/GEESE/g) || []).length;
+		for (i = 0; i < count; i++) {
+            msg.reply('*HONK*'); 
+			msg.reply('*HONK*'); 	
+			msg.reply('*HONK*'); 	
+				sum = sum + 3; 
         }
 });
 
