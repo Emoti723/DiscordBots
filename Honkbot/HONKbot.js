@@ -41,7 +41,7 @@ client.on('message', msg => {
         }
 });
 
-// G:sum command, which makes the bot respond with the current sum
+// H:sum command, which makes the bot respond with the current sum
 client.on('message', msg => {
   if (msg.content === 'H:sum') { 
     created = moment().format('YYYY-MM-DD hh:mm:ss');
