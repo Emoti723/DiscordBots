@@ -1,1 +1,1 @@
-node HONKbot.js
+node Goosebot.js
