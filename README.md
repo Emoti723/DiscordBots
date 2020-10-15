@@ -5,7 +5,7 @@ TOKEN.json is another required file in both bot directories. An example can be s
 
 Requires Nodejs, Discordjs, Momentjs, and log4js. Designed to run in Archlinux. 
 
-https://github.com/nodejs/nodejs.dev
+https://github.com/nodejs/node
 
 https://github.com/discordjs/discord.js/
 
