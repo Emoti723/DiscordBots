@@ -17,10 +17,6 @@ myLoggers.configure({
 });
 
 const logger = myLoggers.getLogger("default");
-
-//General Bot varibles
-var sum = 0;
-var prefix = 'G:sum';
 var username = 'Goosebot#8029';
 
 // Initialization 
@@ -53,17 +49,19 @@ client.on('message', msg => {
     }
 });
 
-
+var prefix = 'G:sum';
 
 // Prefix command, which makes the bot respond with the current sum
 client.on('message', msg => {
   if (msg.content === `${prefix}`) { 
     created = moment().format('YYYY-MM-DD hh:mm:ss');
-	msg.reply(sum);
+	msg.reply(`The current number of honks is ${sum}.`);
 	logger.info('sum has been requested');
 	logger.info(`${sum} @ ${created}`);
   }
 });
+
+var sum = 0;
 
 // After 60 minutes, log the sum to console
 var minutes = 60, the_interval = minutes * 60 * 1000;
@@ -71,6 +69,7 @@ setInterval(function() {
 	created = moment().format('YYYY-MM-DD hh:mm:ss');
 	logger.info('its been 60 minutes');
 	logger.info(`${sum} @ ${created}`);
+	
 }, the_interval);
 
 //token
