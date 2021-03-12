@@ -49,6 +49,15 @@ client.on('message', msg => {
     }
 });
 
+// Test for the word GOOSE and reply with HONK
+client.on('message', msg => {
+    var string = msg.content.toUpperCase();
+    var count = (string.match(/HEXAGON/g) || []).length;
+    for (i = 0; i < count; i++) {
+        msg.reply('**HEXAGONS ARE BESTAGONS**');
+    }
+});
+
 var prefix = 'G:sum';
 
 // Prefix command, which makes the bot respond with the current sum
